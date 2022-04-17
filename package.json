@@ -1,7 +1,7 @@
 {
-  "name": "@GITHUB_USERNAME/REPOSITORY_NAME",
+  "name": "@JCaeta/react-caeta-components",
   "repository": {
-    "url": "https://github.com/GITHUB_USERNAME/REPOSITORY_NAME",
+    "url": "https://github.com/JCaeta/react-caeta-components",
     "type": "git"
   },
   "version": "1.0.0",
@@ -39,7 +39,11 @@
   },
   "peerDependencies": {
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "@emotion/react": "^11.9.0",
+    "@mui/material": "^5.6.1",
+    "@paypal/react-paypal-js": "^7.6.0",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "build": "rollup -c",
@@ -58,8 +62,8 @@
     "dist"
   ],
   "dependencies": {
-    "@emotion/react": "^11.9.0",
     "@mui/material": "^5.6.1",
+    "@emotion/react": "^11.9.0",
     "@paypal/react-paypal-js": "^7.6.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
