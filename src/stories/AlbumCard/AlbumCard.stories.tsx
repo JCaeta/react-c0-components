@@ -3,7 +3,8 @@ import React from 'react';
 import { AlbumCard } from '../../index';
 const imageFile = require('../images/K1.jpg');
 
-export default{
+export default
+{
     title: 'AlbumCard',
     component: AlbumCard,
 }
@@ -14,8 +15,8 @@ const onClick = () => {console.log("On click!")};
 
 export const SingleUrl = Template.bind({});
 
-// @ts-ignore
-SingleUrl.args = {
+SingleUrl.args = 
+{
     heightUnit: '%',
     heightValue: 100,
     widthUnit: '%',
@@ -26,9 +27,8 @@ SingleUrl.args = {
 }
 
 export const SingleDirectory = Template.bind({});
-
-// @ts-ignore
-SingleDirectory.args = {
+SingleDirectory.args = 
+{
     heightUnit: '%',
     heightValue: 100,
     widthUnit: '%',
@@ -37,7 +37,8 @@ SingleDirectory.args = {
     imagePath: imageFile
 }
 
-export const MultipleAlbumCard = () => {
+export const MultipleAlbumCard = () => 
+{
     return(
     <Grid container spacing={{xs:2, md:3}} columns={{xs: 4, sm:8, md:12}}>
         {Array.from(Array(6)).map((_, index) => (

@@ -21,6 +21,7 @@ const ButtonWrapper = ({ currency, showSpinner }) => {
     useEffect(() => {
         dispatch({
             type: "resetOptions",
+            //@ts-ignore
             value: {
                 ...options,
                 currency: currency,
@@ -35,6 +36,7 @@ const ButtonWrapper = ({ currency, showSpinner }) => {
                 disabled={false}
                 forceReRender={[amount, currency, style]}
                 fundingSource={undefined}
+                //@ts-ignore
                 createOrder={(data, actions) => {
                     return actions.order
                         .create({
@@ -52,7 +54,8 @@ const ButtonWrapper = ({ currency, showSpinner }) => {
                             return orderId;
                         });
                 }}
-
+                
+                //@ts-ignore
                 onApprove={function (data: any, actions: any) {
                     return actions.order.capture().then(function () {
                         // Your code here after capture the order

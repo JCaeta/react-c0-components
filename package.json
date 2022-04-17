@@ -1,8 +1,7 @@
 {
   "name": "@JCaeta/react-caeta-components",
-  "repository": {
-    "url": "https://github.com/JCaeta/react-caeta-components",
-    "type": "git"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/JCaeta"
   },
   "version": "1.0.0",
   "main": "dist/index.cjs.js",
@@ -64,6 +63,7 @@
   "dependencies": {
     "@mui/material": "^5.6.1",
     "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^10.0.0",
     "@paypal/react-paypal-js": "^7.6.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
