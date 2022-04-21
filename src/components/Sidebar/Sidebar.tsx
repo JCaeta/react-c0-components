@@ -1,40 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {MdOutlineArrowBack} from 'react-icons/md';
-import {Button} from 'primereact/button';
-import './LightASidebar.css';
-/**
- * If you want to use another theme copy the LightASidebar.css file and
- * rename each selector to the new theme name.
- * Import it without remove the old one. You will select what theme you want from 
- * "theme" prop.
- */
+import {SidebarStyledComponents} from "./SidebarStyle";
 
 export const Sidebar = (props: any) => {
-    let createButton = (button: any) => {
+    const Styled = SidebarStyledComponents(props.theme);
+    const createButtons = (button: any) => {
         return (
-            <Button
-                style={{height: props.buttonHeight}}
-                className={props.theme + "-button-sidebar"} 
-                onClick={()=>button.func()}>
+            <Styled.Button style={{height: props.buttonHeight}} onClick={() => button.func()}>
                 {button.text}
-            </Button>
+            </Styled.Button>
         );
     }
-    
-    return (<>
-        <div style={{width: props.width, height: props.height}} className={props.theme + "-div-sidebar"}>
-            {props.buttonGoBack ?
-                <Button 
-                    style={{height: props.buttonHeight}} 
-                    className={props.theme + "-button-sidebar"}
-                    onClick={() => props.goBackFunc()}> 
-                    <MdOutlineArrowBack className={props.theme + "-icon-button-back"}/>
-                </Button> 
+
+    return(
+        <Styled.Sidebar style={{width: props.width, height: props.height}}>
+            {props.buttonGoBack ? 
+                <Styled.Button style={{height: props.buttonHeight}}>
+                    <Styled.IconGoBack></Styled.IconGoBack>
+                </Styled.Button>
             : null}
-            {props.buttonList.map((button: any) => createButton(button))}
-        </div>
-    </>);
+            {props.buttonList.map((button: any) => createButtons(button))}
+        </Styled.Sidebar>
+    );
 };
 
 Sidebar.defaultProps = {

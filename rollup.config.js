@@ -7,13 +7,14 @@ export default [
     input: "src/index.ts",
     external: Object.keys(pkg.peerDependencies || {}),
     plugins: [
-      typescript({
-        typescript: require("typescript")
-      }),
-      postcss({
-        modules: true,
-        extract: true
-      })
+        // postcss({
+        //     modules: true,
+        //     extract: true,
+        //     include: 'src/.css',
+        //   }),
+        typescript({
+            typescript: require("typescript")
+        })
     ],
     output: [
       { file: pkg.main, format: "cjs" },
