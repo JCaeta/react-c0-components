@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/JCaeta"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "license": "MIT",
@@ -42,7 +42,8 @@
     "@emotion/react": "^11.9.0",
     "@mui/material": "^5.6.1",
     "@paypal/react-paypal-js": "^7.6.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "@emotion/styled": "^10.0.0"
   },
   "scripts": {
     "build": "rollup -c",
@@ -66,11 +67,13 @@
     "@mui/material": "^5.6.1",
     "@paypal/react-paypal-js": "^7.6.0",
     "@types/react-sidebar": "^3.0.2",
+    "postcss": "^8.4.12",
     "primereact": "^8.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-icons": "^4.3.1",
     "react-sidebar": "^3.0.2",
+    "rollup-plugin-postcss": "^4.0.2",
     "styled-components": "^5.2.1"
   }
 }
