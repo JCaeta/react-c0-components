@@ -9,6 +9,8 @@ const LightAButton = styled(PrimeButton)`
     background-color: ${colors.colorLightAButton};
     cursor: pointer;
     border: none;
+    font-size: 14px;
+    color: ${colors.colorLightAText0};
     cursor: pointer;
     &:hover {background-color: ${colors.colorLightAButtonHighlight};}
 `;

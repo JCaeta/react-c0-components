@@ -9,8 +9,8 @@ export default
 }
 
 //@ts-ignore
-export const Template = args => <Sidebar {...args}/>
-// export const Template = () => <Sidebar theme="lightA" width="200px" height="700px"></Sidebar>
+// export const Template = args => <Sidebar {...args}/>
+export const Template = () => <Sidebar theme="lightA" width="200px" height="700px"></Sidebar>
 // Template.args = 
 // {
 //     theme: "lightA",
