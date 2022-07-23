@@ -1,0 +1,36 @@
+::-webkit { /* Chrome/Opera/Safari */
+    color: var(--hover-background-color);
+    color: var(--click-background-color);
+    color: var(--hover-text-color);
+    color: var(--click-text-color);
+}
+
+::-moz { /* Firefox 19+ */
+    color: var(--hover-background-color);
+    color: var(--click-background-color);
+    color: var(--hover-text-color);
+    color: var(--click-text-color);
+}
+
+.button-google-signup {
+    border-radius: 20px !important;
+    font-size: 13px;
+    width: 100%;
+    height: 35px;
+    line-height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition-duration: 350ms !important;
+} 
+
+.button-google-signup:hover{
+    background-color: var(--hover-background-color) !important;
+    transition-duration: 350ms !important;
+    color: var(--hover-text-color) !important;
+}
+
+.button-google-signup:active{
+    background-color: var(--click-background-color)!important;
+    color: var(--click-text-color) !important;
+}

@@ -1,0 +1,183 @@
+import React, { useState } from 'react';
+import './LoginBasic.css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import PropTypes from 'prop-types';
+import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
+
+export const LoginBasic = (props: any) => {
+    var buttonOrientation: string = "button-login button-orientation-" + props.buttonOrientation;
+    var inputBorder: string = "solid " + props.inputBorderWidth + "px " + props.inputBorderColor;
+    var buttonborder: string = "solid " + props.buttonBorderWidth + "px " + props.buttonBorderColor;
+    var labelFontSize: string = props.labelFontSize + "px";
+    document.documentElement.style.setProperty('--placeholder-font-size', props.placeholderFontSize + "px");
+    document.documentElement.style.setProperty('--placeholder-color', props.placeholderColor);
+    document.documentElement.style.setProperty('--help-text-username-color', props.helpTextUsernameColor);
+    document.documentElement.style.setProperty('--help-text-password-color', props.helpTextPasswordColor);
+    document.documentElement.style.setProperty('--eye-icon-color', props.eyeIconColor);
+    var usernameType = props.usernameType == 'username' ? 'text': 'email'
+
+    const [state, setstate] = useState(false);
+
+    const onSubmit = (event: any) => {
+        event.preventDefault();
+        console.log(event);
+        const username = event.target.elements.username.value;
+        const password = event.target.elements.password.value; 
+        props.onSubmit({username: username, password: password});
+    }
+
+    const setHelpTextUsernameVisible = () => {
+        if(props.helpTextUsernameVisible){
+            return (<>
+                <small 
+                    id="username-help-text"
+                    className="form-text text-muted">
+                    {props.helpTextUsername}
+                </small>
+            </>)
+        }
+    }
+
+    const onClickEyeButton = () => {
+        setstate(prevState => !prevState);
+    }
+
+    const setHelpTextPasswordVisible = () => {
+        if(props.helpTextPasswordVisible){
+            return (<>
+                <small 
+                    id="password-help-text" 
+                    className="form-text text-muted">
+                    {props.helpTextPassword}
+                </small>
+            </>)
+        }
+    }
+
+    return (<>
+        <form onSubmit={onSubmit}>
+            <div className="form-group">
+                <label 
+                    style={{
+                        color: props.labelTextColor,
+                        fontSize: labelFontSize}}>
+                    {props.labelUsername}
+                </label>
+                <input 
+                    type={usernameType}
+                    className="form-control" 
+                    aria-describedby="usernameHelp"
+                    name="username"
+                    id="input-username"
+                    placeholder={props.placeholderUsername}
+                    style ={{
+                        backgroundColor: props.inputBackgroundColor, 
+                        color: props.inputTextColor,
+                        border: inputBorder
+                    }}/>
+                {setHelpTextUsernameVisible()}
+            </div>
+
+            <div className="form-group" id="form-group-password">
+                <label
+                    style={{
+                        color: props.labelTextColor,
+                        fontSize: labelFontSize}}>
+                        {props.labelPassword}
+                </label>
+                <div className="input-element-wrapper">
+                    <input 
+                        type={state ? "text" : "password"} 
+                        className="form-control"
+                        name="password"
+                        id="input-password"
+                        aria-describedby="passwordHelp"
+                        placeholder={props.placeholderPassword}
+                        style ={{
+                            backgroundColor: props.inputBackgroundColor, 
+                            color: props.inputTextColor,
+                            border: inputBorder
+                        }}/>
+                    <button type="button" id="button-eye-icon" onClick={onClickEyeButton}>
+                        {state ? <AiOutlineEye id="eye-icon"/> : <AiOutlineEyeInvisible id="eye-icon"/>}
+                    </button>
+                </div>
+                {setHelpTextPasswordVisible()}
+            </div>
+
+            <button
+                type="submit" 
+                className={buttonOrientation}
+                style={{
+                    color: props.buttonTextColor,
+                    background: props.buttonBackgroundColor,
+                    border: buttonborder,
+                    fontSize: props.buttonFontSize
+                }}>
+                {props.textButton}
+            </button>
+        </form>
+    </>);
+}
+
+LoginBasic.defaultProps =
+{
+    labelUsername: 'Username',
+    helpTextUsernameVisible: true,
+    helpTextUsername: 'Enter your username here.',
+    helpTextUsernameColor: 'grey',
+    placeholderUsername: 'Enter username',
+    placeholderFontSize: 15,
+    labelPassword: 'Password',
+    helpTextPasswordVisible: true,
+    helpTextPassword: 'Enter your password here.',
+    helpTextPasswordColor: 'grey',
+    textButton: 'Log in',
+    onSubmit: function () {},
+    buttonOrientation: "center",
+    inputBackgroundColor: 'white',
+    inputTextColor: 'black',
+    labelTextColor: 'black',
+    buttonTextColor: 'black',
+    placeholderColor: 'grey',
+    buttonBackgroundColor: 'white',
+    inputBorderColor: 'rgb(218, 220, 224)',
+    inputBorderWidth: 1,
+    buttonBorderColor: 'rgb(218, 220, 224)',
+    buttonFontSize: 15,
+    eyeIconColor: 'black',
+    usernameType: 'username'
+}
+
+LoginBasic.propTypes = 
+{
+    labelUsername: PropTypes.string,
+    helpTextUsername: PropTypes.string,
+    helpTextUsernameVisible: PropTypes.bool,
+    helpTextUsernameColor: PropTypes.string,
+    placeholderUsername: PropTypes.string,
+    placeholderUsernameVisible: PropTypes.bool,
+    labelPassword: PropTypes.string,
+    helpTextPassword: PropTypes.string,
+    helpTextPasswordVisible: PropTypes.bool,
+    helpTextPasswordColor: PropTypes.string,
+    textButton: PropTypes.string,
+    onSubmit: PropTypes.func,
+    buttonOrientation: PropTypes.oneOf(["center", "left", "right"]),
+    inputBackgroundColor: PropTypes.string,
+    inputTextColor: PropTypes.string,
+    labelTextColor: PropTypes.string,
+    labelFontSize: PropTypes.number,
+    buttonTextColor: PropTypes.string,
+    buttonBackgroundColor: PropTypes.string,
+    placeholderColor: PropTypes.string,
+    inputBorderColor: PropTypes.string,
+    inputBorderWidth: PropTypes.number,
+    buttonBorderColor: PropTypes.string,
+    buttonBorderWidth: PropTypes.number,
+    buttonFontSize: PropTypes.number,
+    placeholderFontSize: PropTypes.number,
+    eyeIconColor: PropTypes.string,
+    usernameType: PropTypes.oneOf(['email', 'username'])
+}

@@ -1,0 +1,16 @@
+options = {
+    labelUsername: string,
+    helpTextUsername: string,
+    placeholderUsername: string,
+    labelPassword: string,
+    helpTextPassword: string,
+    textButton: string,
+    onSubmit: function,
+    style: "centred"
+}
+
+onSubmit
+- returns {username: string, password: string} when click on submit button
+
+Available styles
+"centred"
