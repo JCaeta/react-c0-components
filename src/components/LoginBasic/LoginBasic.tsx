@@ -8,14 +8,28 @@ import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
 export const LoginBasic = (props: any) => {
     var buttonOrientation: string = "button-login button-orientation-" + props.buttonOrientation;
     var inputBorder: string = "solid " + props.inputBorderWidth + "px " + props.inputBorderColor;
-    var buttonborder: string = "solid " + props.buttonBorderWidth + "px " + props.buttonBorderColor;
+    var buttonBorder: string = "solid " + props.buttonBorderWidth + "px " + props.buttonBorderColor;
     var labelFontSize: string = props.labelFontSize + "px";
     document.documentElement.style.setProperty('--placeholder-font-size', props.placeholderFontSize + "px");
     document.documentElement.style.setProperty('--placeholder-color', props.placeholderColor);
     document.documentElement.style.setProperty('--help-text-username-color', props.helpTextUsernameColor);
     document.documentElement.style.setProperty('--help-text-password-color', props.helpTextPasswordColor);
     document.documentElement.style.setProperty('--eye-icon-color', props.eyeIconColor);
+    document.documentElement.style.setProperty('--button-hover-background', props.buttonHoverBackground);
     var usernameType = props.usernameType == 'username' ? 'text': 'email'
+
+    if(props.placeholderUsernameVisible) {
+        document.documentElement.style.setProperty('--placeholder-color-username', props.placeholderUsernameColor);
+    } else {
+        document.documentElement.style.setProperty('--placeholder-color-username', 'transparent');
+    }
+
+    if(props.placeholderPasswordVisible) {
+        document.documentElement.style.setProperty('--placeholder-color-password', props.placeholderPasswordColor);
+    } else {
+        document.documentElement.style.setProperty('--placeholder-color-password', 'transparent');
+    }
+
 
     const [state, setstate] = useState(false);
 
@@ -112,7 +126,7 @@ export const LoginBasic = (props: any) => {
                 style={{
                     color: props.buttonTextColor,
                     background: props.buttonBackgroundColor,
-                    border: buttonborder,
+                    border: buttonBorder,
                     fontSize: props.buttonFontSize
                 }}>
                 {props.textButton}
@@ -128,26 +142,29 @@ LoginBasic.defaultProps =
     helpTextUsername: 'Enter your username here.',
     helpTextUsernameColor: 'grey',
     placeholderUsername: 'Enter username',
+    placeholderUsernameColor: 'grey',
     placeholderFontSize: 15,
     labelPassword: 'Password',
     helpTextPasswordVisible: true,
     helpTextPassword: 'Enter your password here.',
     helpTextPasswordColor: 'grey',
+    placeholderPasswordVisible: true,
+    placeholderPasswordColor: 'grey',
     textButton: 'Log in',
-    onSubmit: function () {},
     buttonOrientation: "center",
     inputBackgroundColor: 'white',
     inputTextColor: 'black',
     labelTextColor: 'black',
     buttonTextColor: 'black',
-    placeholderColor: 'grey',
     buttonBackgroundColor: 'white',
     inputBorderColor: 'rgb(218, 220, 224)',
     inputBorderWidth: 1,
     buttonBorderColor: 'rgb(218, 220, 224)',
     buttonFontSize: 15,
     eyeIconColor: 'black',
-    usernameType: 'username'
+    usernameType: 'username',
+    buttonHoverBackground: 'rgb(230, 230, 230)',
+    onSubmit: function () {},
 }
 
 LoginBasic.propTypes = 
@@ -156,12 +173,18 @@ LoginBasic.propTypes =
     helpTextUsername: PropTypes.string,
     helpTextUsernameVisible: PropTypes.bool,
     helpTextUsernameColor: PropTypes.string,
+    usernameType: PropTypes.oneOf(['email', 'username']),
     placeholderUsername: PropTypes.string,
     placeholderUsernameVisible: PropTypes.bool,
+    placeholderUsernameColor: PropTypes.string,
     labelPassword: PropTypes.string,
     helpTextPassword: PropTypes.string,
     helpTextPasswordVisible: PropTypes.bool,
     helpTextPasswordColor: PropTypes.string,
+    placeholderPassword: PropTypes.string,
+    placeholderPasswordVisible: PropTypes.bool,
+    placeholderFontSize: PropTypes.number,
+    placeholderPasswordColor: PropTypes.string,
     textButton: PropTypes.string,
     onSubmit: PropTypes.func,
     buttonOrientation: PropTypes.oneOf(["center", "left", "right"]),
@@ -171,13 +194,11 @@ LoginBasic.propTypes =
     labelFontSize: PropTypes.number,
     buttonTextColor: PropTypes.string,
     buttonBackgroundColor: PropTypes.string,
-    placeholderColor: PropTypes.string,
     inputBorderColor: PropTypes.string,
     inputBorderWidth: PropTypes.number,
     buttonBorderColor: PropTypes.string,
     buttonBorderWidth: PropTypes.number,
     buttonFontSize: PropTypes.number,
-    placeholderFontSize: PropTypes.number,
     eyeIconColor: PropTypes.string,
-    usernameType: PropTypes.oneOf(['email', 'username'])
+    buttonHoverBackground: PropTypes.string
 }

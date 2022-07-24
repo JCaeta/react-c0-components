@@ -4,6 +4,9 @@
     color: var(--help-text-password-color);
     font-size: var(--placeholder-font-size);
     color: var(--eye-icon-color);
+    color: var(--placeholder-color-password);
+    color: var(--placeholder-color-username);
+    color: var(--button-hover-background);
 }
 
 ::-moz { /* Firefox 19+ */
@@ -11,6 +14,10 @@
     color: var(--help-text-username-color);
     color: var(--help-text-password-color);
     font-size: var(--placeholder-font-size);
+    color: var(--eye-icon-color);
+    color: var(--placeholder-color-password);
+    color: var(--placeholder-color-username);
+    color: var(--button-hover-background);
 }
 
 .form-group {
@@ -68,7 +75,7 @@
 
 .button-login:hover{
     border: solid 1px rgb(218, 220, 224) !important;
-    background-color: rgb(230, 230, 230) !important;
+    background-color: var(--button-hover-background) !important;
     transition-duration: 350ms !important;
 }
 
@@ -91,6 +98,13 @@
     min-width: 100% !important;
 }
 
+#input-password::placeholder{
+    color:var(--placeholder-color-password) !important;
+}
+
+#input-username::placeholder{
+    color:var(--placeholder-color-username) !important;
+}
 
 #eye-icon {
     position: relative;

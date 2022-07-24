@@ -28,7 +28,6 @@ export const ButtonGoogleLogin = (props: any) =>
     return (<>
         <GoogleLogin
             clientId={props.clientId}
-            // clientId={CLIENT_ID}
             onSuccess={props.onSuccess}
             onFailure={props.onFailure}
             render={renderProps => (

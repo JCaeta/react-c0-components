@@ -11,6 +11,8 @@ export default
         helpTextUsernameVisible: {control: 'boolean'},
         helpTextPasswordVisible: {control: 'boolean'},
         usernameType:  { control: { type: "select", options: ["username", "email"] }},
+        placeholderPasswordVisible: {control: 'boolean'},
+        placeholderUsernameVisible: {control: 'boolean'},
     }
 }
 
@@ -39,8 +41,10 @@ Primary.args =
     textButton: 'Log in',
     placeholderUsername: 'Enter username',
     placeholderPassword: 'Enter password',
+    placeholderPasswordVisible: true,
     placeholderFontSize: 15,
-    placeholderColor: 'grey',
+    placeholderPasswordColor: 'grey',
+    placeholderUsernameColor: 'grey',
     labelTextColor: 'black',
     labelFontSize: 15,
     buttonBackgroundColor: 'white',
@@ -50,6 +54,6 @@ Primary.args =
     buttonOrientation: "center",
     buttonFontSize: 15,
     eyeIconColor: 'black',
+    buttonHoverBackground: 'rgb(230, 230, 230)',
     onSubmit: onSubmit
 }
-
