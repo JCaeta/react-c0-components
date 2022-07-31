@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/JCaeta"
   },
-  "version": "1.1.4",
+  "version": "1.1.8",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "license": "MIT",
@@ -35,8 +35,6 @@
     "postcss": "^8.4.12",
     "prepend-file": "^2.0.0",
     "prettier": "^2.1.2",
-    "primeflex": "^3.2.1",
-    "primereact": "^8.0.0",
     "react-google-login": "^5.2.2",
     "react-icons": "^4.4.0",
     "react-sidebar": "^3.0.2",

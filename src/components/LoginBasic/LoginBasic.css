@@ -6,7 +6,8 @@
     color: var(--eye-icon-color);
     color: var(--placeholder-color-password);
     color: var(--placeholder-color-username);
-    color: var(--button-hover-background);
+    color: var(--button-hover-background-color);
+    color: var(--button-click-background-color)
 }
 
 ::-moz { /* Firefox 19+ */
@@ -75,12 +76,12 @@
 
 .button-login:hover{
     border: solid 1px rgb(218, 220, 224) !important;
-    background-color: var(--button-hover-background) !important;
+    background-color: var(--button-hover-background-color) !important;
     transition-duration: 350ms !important;
 }
 
 .button-login:active{
-    background-color: rgb(100, 100, 100) !important;
+    background-color: var(--button-click-background-color) !important;
 }
 
 .input-element-wrapper {

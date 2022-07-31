@@ -7,10 +7,10 @@ export default
     title: 'LoginBasic',
     component: LoginBasic,
     argTypes : {
-        buttonOrientation: { control: { type: "select", options: ["center", "left", "right"] }},
+        buttonOrientation: { options: ["center", "left", "right"] },
         helpTextUsernameVisible: {control: 'boolean'},
         helpTextPasswordVisible: {control: 'boolean'},
-        usernameType:  { control: { type: "select", options: ["username", "email"] }},
+        usernameType: {options: ["username", "email"] },
         placeholderPasswordVisible: {control: 'boolean'},
         placeholderUsernameVisible: {control: 'boolean'},
     }
@@ -21,8 +21,7 @@ const onSubmit = (d: any) => {
     console.log("Password: " + d.password);
 }
 
-const Template = (args: any) => 
-    <LoginBasic {...args} />
+const Template = (args: any) => <LoginBasic {...args} />
 
 export const Primary = Template.bind({});
 Primary.args = 
@@ -34,12 +33,13 @@ Primary.args =
     usernameType: 'username',
     helpTextUsernameVisible: true,
     helpTextUsername: 'Enter your username here',
-    helpTextUsernameColor: 'red',
+    helpTextUsernameColor: 'grey',
     helpTextPasswordVisible: true,
     helpTextPassword: 'Enter your password here',
     helpTextPasswordColor: 'grey',
     textButton: 'Log in',
     placeholderUsername: 'Enter username',
+    placeholderUsernameVisible: true,
     placeholderPassword: 'Enter password',
     placeholderPasswordVisible: true,
     placeholderFontSize: 15,
@@ -54,6 +54,7 @@ Primary.args =
     buttonOrientation: "center",
     buttonFontSize: 15,
     eyeIconColor: 'black',
-    buttonHoverBackground: 'rgb(230, 230, 230)',
+    buttonHoverBackgroundColor: 'rgb(230, 230, 230)',
+    buttonClickBackgroundColor: 'rgb(100, 100, 100)',
     onSubmit: onSubmit
 }

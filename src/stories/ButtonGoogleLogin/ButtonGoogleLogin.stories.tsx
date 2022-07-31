@@ -22,7 +22,7 @@ const TemplateButtonGoogleLogin = (args: any) => <ButtonGoogleLogin {...args} />
 export const Primary = TemplateButtonGoogleLogin.bind({});
 Primary.args = 
 {
-    clientId: "",
+    clientId: '',
     text: 'Sign up with Google',
     backgroundColor: 'white',
     textColor: 'black',

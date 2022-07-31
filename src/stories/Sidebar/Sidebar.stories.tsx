@@ -1,16 +1,16 @@
 import React from 'react';
-import { Sidebar } from '../../components/Sidebar/Sidebar';
+// import { Sidebar } from '../../components/Sidebar/Sidebar';
 // import {Sidebar} from '../../../';
 
-export default
-{
-    title: 'Sidebar',
-    component: Sidebar,
-}
+// export default
+// {
+//     title: 'Sidebar',
+//     component: Sidebar,
+// }
 
 //@ts-ignore
 // export const Template = args => <Sidebar {...args}/>
-export const Template = () => <Sidebar theme="lightA" width="200px" height="700px"></Sidebar>
+// export const Template = () => <Sidebar theme="lightA" width="200px" height="700px"></Sidebar>
 // Template.args = 
 // {
 //     theme: "lightA",

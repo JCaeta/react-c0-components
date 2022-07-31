@@ -13,6 +13,7 @@
 }
 
 .button-google-signup {
+    position: relative;
     border-radius: 20px !important;
     font-size: 13px;
     width: 100%;

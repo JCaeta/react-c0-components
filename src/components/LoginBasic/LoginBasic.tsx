@@ -15,7 +15,9 @@ export const LoginBasic = (props: any) => {
     document.documentElement.style.setProperty('--help-text-username-color', props.helpTextUsernameColor);
     document.documentElement.style.setProperty('--help-text-password-color', props.helpTextPasswordColor);
     document.documentElement.style.setProperty('--eye-icon-color', props.eyeIconColor);
-    document.documentElement.style.setProperty('--button-hover-background', props.buttonHoverBackground);
+    document.documentElement.style.setProperty('--button-hover-background-color', props.buttonHoverBackgroundColor);
+    document.documentElement.style.setProperty('--button-click-background-color', props.buttonClickBackgroundColor);
+
     var usernameType = props.usernameType == 'username' ? 'text': 'email'
 
     if(props.placeholderUsernameVisible) {
@@ -35,7 +37,6 @@ export const LoginBasic = (props: any) => {
 
     const onSubmit = (event: any) => {
         event.preventDefault();
-        console.log(event);
         const username = event.target.elements.username.value;
         const password = event.target.elements.password.value; 
         props.onSubmit({username: username, password: password});
@@ -163,7 +164,8 @@ LoginBasic.defaultProps =
     buttonFontSize: 15,
     eyeIconColor: 'black',
     usernameType: 'username',
-    buttonHoverBackground: 'rgb(230, 230, 230)',
+    buttonHoverBackgroundColor: 'rgb(230, 230, 230)',
+    buttonClickBackgroundColor: 'rgb(100, 100, 100)',
     onSubmit: function () {},
 }
 
@@ -200,5 +202,6 @@ LoginBasic.propTypes =
     buttonBorderWidth: PropTypes.number,
     buttonFontSize: PropTypes.number,
     eyeIconColor: PropTypes.string,
-    buttonHoverBackground: PropTypes.string
+    buttonHoverBackgroundColor: PropTypes.string,
+    buttonClickBackgroundColor: PropTypes.string
 }
