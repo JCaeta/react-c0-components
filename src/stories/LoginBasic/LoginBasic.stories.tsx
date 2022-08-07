@@ -1,5 +1,4 @@
 import React from 'react';
-// import {LoginBasic} from '../../../dist/index.esm';
 import {LoginBasic} from '../../components/LoginBasic/LoginBasic';
 
 export default

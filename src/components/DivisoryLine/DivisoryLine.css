@@ -1,0 +1,20 @@
+#line-container{
+    display: flex;
+    justify-content: center;
+}
+
+.line-div {
+    position: relative;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    background-color: black;
+    width: 50%;
+    height: 1px;
+}
+
+#line-text {
+    position:relative;
+    line-height: 130%;
+    background-color: transparent;
+    text-align: center;
+}
