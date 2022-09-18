@@ -6,6 +6,7 @@ import { ProgressSpinner } from './components/ProgressSpinner/ProgressSpinner';
 import { Button } from './components/Button/Button';
 import { DivisoryLine } from './components/DivisoryLine/DivisoryLine';
 import { Dialog } from './components/Dialog/Dialog';
+import { Card } from './components/Card/Card';
 
 export { AlbumCard };
 export { PayPalPayment };
@@ -15,3 +16,4 @@ export {ProgressSpinner};
 export {Button};
 export {DivisoryLine};
 export {Dialog};
+export {Card};

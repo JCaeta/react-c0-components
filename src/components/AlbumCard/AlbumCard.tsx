@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
+import { Button } from '../Button/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -45,7 +46,7 @@ export const AlbumCard = (props: any) =>
         }
     };
 
-    const onClick = () => {props.onClick()};
+    // const onClick = () => {props.onClick()};
 
     return (
     <ThemeProvider theme={theme}>
@@ -57,15 +58,28 @@ export const AlbumCard = (props: any) =>
                     gutterBottom 
                     variant="h5" 
                     component="h2">
-                    Heading
+                    {props.title}
                 </Typography>
                 <Typography>
-                    This is a media card. You can use this section to describe the
-                    content.
+                    {props.description}
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button onClick={onClick}variant="contained" size="medium">Buy it for $5</Button>
+                <Button 
+                    onClick={props.onClick}
+                    text={props.buttonText}
+                    height={50}>
+                    {props.buttonText}
+                </Button>
+                {/* <Button 
+                    onClick={onClick}
+
+                    variant="contained" 
+                    size="medium"
+                    >
+                    {props.buttonText}
+                </Button> */}
+
             </CardActions>
         </Card>
     </ThemeProvider>);
@@ -73,6 +87,9 @@ export const AlbumCard = (props: any) =>
 
 AlbumCard.defaultProps =
 {
+    title: "Title",
+    description: "This is the description of the Album Card",
+    buttonText: "Button Text",
     heightUnit: '%',
     heightValue: 100,
     widthUnit: '%',
@@ -80,11 +97,14 @@ AlbumCard.defaultProps =
     marginUnit: '%',
     marginValue: 0,
     imagePath: '',
-    imageSource: 'directory',
+    imageSource: 'directory'
 }
 
 AlbumCard.propTypes = 
 {
+    title: PropTypes.string,
+    description: PropTypes.string,
+    buttonText: PropTypes.string,
     heightUnit: PropTypes.oneOf(['%', 'px', 'vw', 'vh']),
     heightValue: PropTypes.number,
     widthUnit: PropTypes.oneOf(['%', 'px', 'vh', 'vh']),
@@ -92,7 +112,8 @@ AlbumCard.propTypes =
     marginUnit: PropTypes.oneOf(['%', 'px', 'vh', 'vh']),
     marginValue: PropTypes.number,
     imagePath: PropTypes.string,
-    imageSource: PropTypes.oneOf(['url', 'directory'])
+    imageSource: PropTypes.oneOf(['url', 'directory']),
+    onClick: PropTypes.func
 }
 
 // export default AlbumCard;
