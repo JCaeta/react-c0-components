@@ -47,5 +47,6 @@ Button.propTypes =
     backgroundColor: PropTypes.string,
     textColor: PropTypes.string,
     height: PropTypes.number,
-    fontSize: PropTypes.number
+    fontSize: PropTypes.number,
+    onClick: PropTypes.func
 }
