@@ -3,19 +3,34 @@ import PropTypes from 'prop-types';
 import "./Card.css";
 export const Card = (props: any) => 
 {
+    document.documentElement.style.setProperty('--shadow-color-no-focus', props.shadowColorNoFocus);
+    document.documentElement.style.setProperty('--shadow-color-focus', props.shadowColorFocus);
+    document.documentElement.style.setProperty('--button-border-color', props.buttonForeColor);
+
     return (<>
         <div className="container">
-            <div className="card">
+            <div className="card" style={{background: props.backgroundColor}}>
                 <figure>
                     <img src={props.imageSrc}/>
                 </figure>
                 <div className="content">
-                    <h3>{props.title}</h3>
-                    <p>{props.description}</p>
-                    <a href="">{props.buttonText}</a>
+                    <h3
+                        style={{color: props.titleColor}}>
+                        {props.title}
+                    </h3>
+                    <p
+                        style={{color: props.descriptionColor}}>
+                        {props.description}
+                    </p>
+                    <a 
+                        href={props.link} 
+                        style={{
+                            color: props.buttonForeColor, 
+                            backgroundColor: props.buttonBackgroundColor}}>
+                        {props.buttonText}
+                    </a>
                 </div>
             </div>
-
         </div>
     </>);
 }
@@ -23,18 +38,32 @@ export const Card = (props: any) =>
 Card.defaultProps =
 {
     title: "Title",
+    titleColor: "black",
     description: "This is the card's description",
+    descriptionColor: "#6a6a6a",
     buttonText: "Button text",
-    imageSrc: ""
+    buttonForeColor: "#2fb4cc",
+    buttonBackgroundColor: "#fff",
+    imageSrc: "",
+    backgroundColor: "#fff",
+    shadowColorNoFocus: "rgba(0,0,0, 0.2)",
+    shadowColorFocus: "rgba(0,0,0, 0.4)",
+    link: "https://www.google.com"
 }
 
 Card.propTypes = 
 {
     title: PropTypes.string,
+    titleColor: PropTypes.string,
     description: PropTypes.string,
     buttonText: PropTypes.string,
-    imageSrc: PropTypes.string
-    // onClick: PropTypes.func
+    buttonForeColor: PropTypes.string,
+    buttonBackgroundColor: PropTypes.string,
+    imageSrc: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    shadowColorNoFocus: PropTypes.string,
+    shadowColorFocus: PropTypes.string,
+    link: PropTypes.string
 }
 
 
