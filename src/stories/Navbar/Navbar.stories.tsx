@@ -12,7 +12,8 @@ const Template = (args: any) => <Navbar {...args} />;
 export const Primary = Template.bind({});
 Primary.args = 
 {
-    title: "Title",
+    // title: "Title",
+    homeElement: <h3 style={{color: "white"}}>Title</h3>,
     titleColor: "white",
     linksColor: "white",
     linksBackgroundColorFocused: "grey",

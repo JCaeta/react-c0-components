@@ -8,6 +8,7 @@ import { DivisoryLine } from './components/DivisoryLine/DivisoryLine';
 import { Dialog } from './components/Dialog/Dialog';
 import { Card } from './components/Card/Card';
 import { Navbar } from './components/Navbar/Navbar';
+import { Article } from './components/Article/Article';
 
 // export { AlbumCard };
 export { PayPalPayment };
@@ -19,3 +20,4 @@ export {DivisoryLine};
 export {Dialog};
 export {Card};
 export { Navbar};
+export {Article};

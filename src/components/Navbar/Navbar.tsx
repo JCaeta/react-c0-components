@@ -5,7 +5,6 @@ import { BurgerButton } from './BurguerButton';
 
 export const Navbar = (props: any) => 
 {
-    document.documentElement.style.setProperty('--title-color', props.titleColor);
     document.documentElement.style.setProperty('--links-color', props.linksColor);
     document.documentElement.style.setProperty('--background-color', props.backgroundColor);
     document.documentElement.style.setProperty('--links-background-color-focused', props.linksBackgroundColorFocused);
@@ -24,7 +23,7 @@ export const Navbar = (props: any) =>
 
     return (<>
         <nav className="navbar">
-            <div className="brand-title">{props.title}</div>
+            <div className="home-element">{props.homeElement}</div>
             <div className="burger-button">
                 <BurgerButton 
                     onClick={onClick} 
@@ -42,8 +41,7 @@ export const Navbar = (props: any) =>
 
 Navbar.defaultProps =
 {
-    title: "Title",
-    titleColor: "white",
+    homeElement: <h3 style={{color: "white"}}>Title</h3>,
     linksColor: "white",
     backgroundColor: "rgb(32,32,32)",
     burgerButtonColor: "white",
@@ -57,11 +55,11 @@ Navbar.defaultProps =
 
 Navbar.propTypes = 
 {
-    title: PropTypes.string,
-    titleColor: PropTypes.string,
+    homeElement: PropTypes.element,
     linksColor: PropTypes.string,
     linksBackgroundColorFocused: PropTypes.string,
     backgroundColor: PropTypes.string,
     burgerButtonColor: PropTypes.string,
     links: PropTypes.array
 }
+

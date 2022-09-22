@@ -8,12 +8,12 @@ export const Card = (props: any) =>
     document.documentElement.style.setProperty('--button-border-color', props.buttonForeColor);
 
     return (<>
-        <div className="container">
-            <div className="card" style={{background: props.backgroundColor}}>
+        <div className="c0-card-container">
+            <div className="c0-card" style={{background: props.backgroundColor}}>
                 <figure>
                     <img src={props.imageSrc}/>
                 </figure>
-                <div className="content">
+                <div className="c0-card-content">
                     <h3
                         style={{color: props.titleColor}}>
                         {props.title}

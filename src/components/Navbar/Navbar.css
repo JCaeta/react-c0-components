@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: var(--title-color);
     color: var(--links-color);
@@ -26,18 +28,15 @@
     height: 30px;
 }
 
-
 @media(min-width: 768px) {
     .burger-button {
         display: none;
     }
 }
 
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-    color: var(--title-color);
-}
+/* .home-element {
+    margin-left: 30px;
+} */
 
 .navbar-links {
     height: 100%;
@@ -58,6 +57,8 @@
     text-decoration: none;
     color: var(--links-color);
     padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
 }
 
 .navbar-links li:hover {
