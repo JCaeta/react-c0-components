@@ -1,6 +1,6 @@
 # react-c0-components
 
-Installation
+To add to project
 
 npm i @JCaeta/react-c0-components
 
