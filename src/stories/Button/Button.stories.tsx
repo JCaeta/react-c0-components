@@ -16,10 +16,11 @@ Primary.args =
     borderWidth: 1,
     borderColor: 'rgb(218, 220, 224)',
     hoverBackgroundColor: 'rgb(218, 220, 224)',
+    hoverTextColor: "grey",
     clickBackgroundColor: 'rgb(100, 100, 100)',
+    clickTextColor: "black",
     backgroundColor: 'white',
     textColor: 'black',
     height: 30,
-    radius: 15,
     fontSize: 15
 }

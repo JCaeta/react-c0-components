@@ -6,7 +6,9 @@ export const Button = (props: any) =>
 {
     var border = "solid " + props.borderWidth + "px " + props.borderColor;
     document.documentElement.style.setProperty('--hover-background-color', props.hoverBackgroundColor);
+    document.documentElement.style.setProperty('--hover-text-color', props.hoverTextColor);
     document.documentElement.style.setProperty('--click-background-color', props.clickBackgroundColor);
+    document.documentElement.style.setProperty('--click-text-color', props.clickTextColor);
 
     return (<>
         <button 
@@ -30,7 +32,9 @@ Button.defaultProps =
     borderWidth: 1,
     borderColor: 'rgb(218, 220, 224)',
     hoverBackgroundColor: 'rgb(218, 220, 224)',
+    hoverTextColor: "grey",
     clickBackgroundColor: 'rgb(100, 100, 100)',
+    clickTextColor: "black",
     backgroundColor: 'white',
     textColor: 'black',
     height: 30,
@@ -43,7 +47,9 @@ Button.propTypes =
     borderColor: PropTypes.string,
     borderWidth: PropTypes.number,
     hoverBackgroundColor: PropTypes.string,
+    hoverTextColor: PropTypes.string,
     clickBackgroundColor: PropTypes.string,
+    clickTextColor: PropTypes.string,
     backgroundColor: PropTypes.string,
     textColor: PropTypes.string,
     height: PropTypes.number,

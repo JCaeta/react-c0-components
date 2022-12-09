@@ -13,6 +13,7 @@
     "noImplicitAny": true,
     "outDir": "./dist",
     "target": "es5",
+    "lib": ["dom"],
     "jsx": "react",
   },
   "include": ["src/**/*"],
