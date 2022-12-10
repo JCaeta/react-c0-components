@@ -15,6 +15,7 @@ Primary.args =
     text: "Click me",
     borderWidth: 1,
     borderColor: 'rgb(218, 220, 224)',
+    borderRadius: 5,
     hoverBackgroundColor: 'rgb(218, 220, 224)',
     hoverTextColor: "grey",
     clickBackgroundColor: 'rgb(100, 100, 100)',

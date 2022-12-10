@@ -13,10 +13,12 @@ const Template = (args: any) => <Card {...args} />;
 export const Primary = Template.bind({});
 Primary.args = 
 {
-    title: "Title",
+    title: "Generic persistence layer with MongoDB and C#",
     titleColor: "black",
     description: "This is the card's description",
     descriptionColor: "#6a6a6a",
+    height: "100%",
+    width: "100%",
     buttonText: "Button text",
     buttonForeColor: "#2fb4cc",
     buttonBackgroundColor: "#fff",
