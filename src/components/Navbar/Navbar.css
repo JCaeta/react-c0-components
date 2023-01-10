@@ -34,10 +34,6 @@
     }
 }
 
-/* .home-element {
-    margin-left: 30px;
-} */
-
 .navbar-links {
     height: 100%;
 }
@@ -59,6 +55,17 @@
     padding: 1rem;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
+}
+
+.navbar-links li span {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: var(--links-color);
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    line-height: 26px;
 }
 
 .navbar-links li:hover {
@@ -113,6 +120,10 @@
         padding: .5rem 1rem;
     }
 
+    .navbar-links ul li span {
+        padding: .5rem 1rem;
+    }
+    
     .navbar-links.active {
         display: flex;
     }

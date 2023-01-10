@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import "./Navbar.css"
 import { BurgerButton } from './BurguerButton';
+import { HashLink } from 'react-router-hash-link';
 
 export const Navbar = (props: any) => 
 {
@@ -17,25 +18,38 @@ export const Navbar = (props: any) =>
         setClicked(!clicked);
     }
 
-    function createButton (name: string, link: string) {
-        return <li><a href={link}>{name}</a></li>
+    function createButton (name: string, link: string, isHashLink: boolean) {
+        if(isHashLink){
+            return (
+                <HashLink 
+                    id="hash-link" 
+                    smooth to={link} 
+                    style={{textDecoration: "none"}}>
+                    <li>
+                        <span >{name}</span>
+                    </li>
+                </HashLink>
+            );
+        } else{
+            return <li><a href={link}>{name}</a></li>
+        }
     }
 
     return (<>
-        <nav className="navbar">
-            <div className="home-element">{props.homeElement}</div>
-            <div className="burger-button">
-                <BurgerButton 
-                    onClick={onClick} 
-                    clicked={clicked}
-                    color={props.burgerButtonColor}/>
-            </div>
-            <div className="navbar-links">
-                <ul>
-                    {props.links.map((l: any) => createButton(l.name, l.link))}
-                </ul>
-            </div>
-        </nav>
+            <nav className="navbar">
+                <div className="home-element">{props.homeElement}</div>
+                <div className="burger-button">
+                    <BurgerButton 
+                        onClick={onClick} 
+                        clicked={clicked}
+                        color={props.burgerButtonColor}/>
+                </div>
+                <div className="navbar-links">
+                    <ul>
+                        {props.links.map((l: any) => createButton(l.name, l.link, l.isHashLink))}
+                    </ul>
+                </div>
+            </nav>
     </>);
 }
 
@@ -47,9 +61,9 @@ Navbar.defaultProps =
     burgerButtonColor: "white",
     linksBackgroundColorFocused: "grey",
     links: [
-        {name: "Google", link: "https://google.com"},
-        {name: "Youtube", link: "https://youtube.com"},
-        {name: "Facebook", link: "https://facebook.com"}
+        {name: "Google", link: "https://google.com", isHashLink: false},
+        {name: "Youtube", link: "https://youtube.com", isHashLink: false},
+        {name: "Facebook", link: "https://facebook.com", isHashLink: false}
     ]
 }
 
