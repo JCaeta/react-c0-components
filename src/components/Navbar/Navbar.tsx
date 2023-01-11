@@ -22,7 +22,6 @@ export const Navbar = (props: any) =>
         if(isHashLink){
             return (
                 <HashLink 
-                    id="hash-link" 
                     smooth to={link} 
                     style={{textDecoration: "none"}}>
                     <li>
@@ -35,27 +34,54 @@ export const Navbar = (props: any) =>
         }
     }
 
+    function createHomeElement() {
+        if(props.homeLink.link == ""){
+            return <div className="home-element">{props.homeElement}</div>
+        } else {
+            if(props.homeLink.isHashLink) {
+                return (
+                    <HashLink  
+                        smooth 
+                        to={props.homeLink.link}
+                        style={{textDecoration: "none"}}>
+                        {props.homeElement}
+                    </HashLink>
+                )
+            } else {
+                return (
+                    <a 
+                        href={props.homeLink.link} 
+                        className="home-element"
+                        style={{textDecoration: "none"}}>
+                        {props.homeElement}
+                    </a>
+                )
+            }
+        }
+    }
+
     return (<>
-            <nav className="navbar">
-                <div className="home-element">{props.homeElement}</div>
-                <div className="burger-button">
-                    <BurgerButton 
-                        onClick={onClick} 
-                        clicked={clicked}
-                        color={props.burgerButtonColor}/>
-                </div>
-                <div className="navbar-links">
-                    <ul>
-                        {props.links.map((l: any) => createButton(l.name, l.link, l.isHashLink))}
-                    </ul>
-                </div>
-            </nav>
+        <nav className="navbar">
+            {createHomeElement()}
+            <div className="burger-button">
+                <BurgerButton 
+                    onClick={onClick} 
+                    clicked={clicked}
+                    color={props.burgerButtonColor}/>
+            </div>
+            <div className="navbar-links">
+                <ul>
+                    {props.links.map((l: any) => createButton(l.name, l.link, l.isHashLink))}
+                </ul>
+            </div>
+        </nav>
     </>);
 }
 
 Navbar.defaultProps =
 {
     homeElement: <h3 style={{color: "white"}}>Title</h3>,
+    homeLink: {link: "", isHashLink: false},
     linksColor: "white",
     backgroundColor: "rgb(32,32,32)",
     burgerButtonColor: "white",
@@ -70,6 +96,7 @@ Navbar.defaultProps =
 Navbar.propTypes = 
 {
     homeElement: PropTypes.element,
+    homeLink: PropTypes.object,
     linksColor: PropTypes.string,
     linksBackgroundColorFocused: PropTypes.string,
     backgroundColor: PropTypes.string,

@@ -52,3 +52,56 @@ Test1.args =
         {name: "Facebook", link: "https://facebook.com"}
     ]
 }
+
+// This Test2 template uses a link in the home element
+const Template2 = (args: any) => {
+    return (<>
+        <Router>
+            <Navbar {...args} />
+        </Router>
+    </>);
+}
+
+export const Test2 = Template2.bind({});
+Test2.args = 
+{
+    homeElement: <h3 style={{color: "white"}}>Title</h3>,
+    homeLink: {link: "https://youtube.com", isHashLink: false},
+    titleColor: "white",
+    linksColor: "white",
+    linksBackgroundColorFocused: "grey",
+    backgroundColor: "rgb(32,32,32)",
+    burgerButtonColor: "white",
+    links: [
+        {name: "HashLink", link: "/#sec", isHashLink: true},
+        {name: "Youtube", link: "https://youtube.com"},
+        {name: "Facebook", link: "https://facebook.com"}
+    ]
+}
+
+// This Test3 template uses HashLink in the home element
+const Template3 = (args: any) => {
+    return (<>
+        <Router>
+            <Navbar {...args} />
+            <section id="sec" style={{height: "500px", top: "900px", backgroundColor: "blue"}}>HashLink section</section>
+        </Router>
+    </>);
+}
+
+export const Test3 = Template3.bind({});
+Test3.args = 
+{
+    homeElement: <h3 style={{color: "white"}}>Title</h3>,
+    homeLink: {link: "/#sec", isHashLink: true},
+    titleColor: "white",
+    linksColor: "white",
+    linksBackgroundColorFocused: "grey",
+    backgroundColor: "rgb(32,32,32)",
+    burgerButtonColor: "white",
+    links: [
+        {name: "HashLink", link: "/#sec", isHashLink: true},
+        {name: "Youtube", link: "https://youtube.com"},
+        {name: "Facebook", link: "https://facebook.com"}
+    ]
+}

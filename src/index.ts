@@ -11,7 +11,8 @@ import { CsharpLogo } from './components/Logos/CsharpLogo/CsharpLogo';
 import { PythonLogo } from './components/Logos/PythonLogo/PythonLogo';
 import { ReactLogo } from './components/Logos/ReactLogo/ReactLogo';
 import { MongoDBLogo } from './components/Logos/MongoDBLogo/MongoDBLogo';
-import { NodeLogo } from './components/Logos/NodeLogo/NodeLogo';
+import { NodeLogo0 } from './components/Logos/NodeLogo0/NodeLogo0';
+import { NodeLogo1 } from './components/Logos/NodeLogo1/NodeLogo1';
 
 export { PayPalPayment };
 export {ButtonGoogleLogin};
@@ -26,4 +27,5 @@ export {CsharpLogo};
 export {PythonLogo};
 export {ReactLogo};
 export {MongoDBLogo};
-export {NodeLogo};
+export {NodeLogo0};
+export {NodeLogo1};
