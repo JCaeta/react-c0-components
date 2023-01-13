@@ -15,7 +15,7 @@ export const Card = (props: any) =>
                 </figure>
                 <div className="c0-card-content">
                     <h3
-                        style={{color: props.titleColor}}>
+                        style={{color: props.titleColor, fontSize: props.titleFontSize + "px"}}>
                         {props.title}
                     </h3>
                     <p
@@ -39,6 +39,7 @@ Card.defaultProps =
 {
     title: "Title",
     titleColor: "black",
+    titleFontSize: 15,
     description: "This is the card's description",
     descriptionColor: "#6a6a6a",
     buttonText: "Button text",
@@ -55,6 +56,7 @@ Card.propTypes =
 {
     title: PropTypes.string,
     titleColor: PropTypes.string,
+    titleFontSize: PropTypes.string,
     description: PropTypes.string,
     buttonText: PropTypes.string,
     buttonForeColor: PropTypes.string,
