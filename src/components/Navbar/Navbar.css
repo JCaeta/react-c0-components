@@ -20,6 +20,7 @@
     justify-content: space-between;
     background-color: var(--background-color);
 }
+
 .burger-button {
     position: absolute;
     left: calc(100% - 50px);
@@ -28,7 +29,12 @@
     height: 30px;
 }
 
+.home-element{
+    margin: 5px;
+}
+
 @media(min-width: 768px) {
+    /*Hide mobile style buttons*/
     .burger-button {
         display: none;
     }
@@ -40,7 +46,7 @@
 
 .navbar-links ul {
     display: flex;
-    margin: 0;
+    margin: 5px;
     padding: 0;
 }
 
@@ -92,7 +98,8 @@
     border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
+    /*Show pc style buttons*/
     .navbar {
         flex-direction: column;
         align-items: flex-start;

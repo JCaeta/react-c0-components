@@ -1,11 +1,17 @@
 import React from 'react';
 import { Navbar} from '../../index';
 import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import { customViewports } from '../storiesVariables';
 
 export default
 {
     title: 'Navbar',
     component: Navbar,
+    parameters: {
+        viewport: {
+            viewports: customViewports
+        }
+    }
 }
 
 // This Test0 template don't use HashLinks

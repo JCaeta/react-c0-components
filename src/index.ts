@@ -1,10 +1,10 @@
 import { PayPalPayment } from './components/PayPalPayment/PayPalPayment';
 import {ButtonGoogleLogin} from './components/ButtonGoogleLogin/ButtonGoogleLogin';
-import {LoginBasic} from './components/LoginBasic/LoginBasic';
-import { ProgressSpinner } from './components/ProgressSpinner/ProgressSpinner';
+// import {LoginBasic} from './components/LoginBasic/LoginBasic';
+// import { ProgressSpinner } from './components/ProgressSpinner/ProgressSpinner';
 import { Button } from './components/Button/Button';
 import { DivisoryLine } from './components/DivisoryLine/DivisoryLine';
-import { Dialog } from './components/Dialog/Dialog';
+// import { Dialog } from './components/Dialog/Dialog';
 import { Card } from './components/Card/Card';
 import { Navbar } from './components/Navbar/Navbar';
 import { CsharpLogo } from './components/Logos/CsharpLogo/CsharpLogo';
@@ -16,11 +16,11 @@ import { NodeLogo1 } from './components/Logos/NodeLogo1/NodeLogo1';
 
 export { PayPalPayment };
 export {ButtonGoogleLogin};
-export {LoginBasic};
-export {ProgressSpinner};
+// export {LoginBasic};
+// export {ProgressSpinner};
 export {Button};
 export {DivisoryLine};
-export {Dialog};
+// export {Dialog};
 export {Card};
 export {Navbar};
 export {CsharpLogo};
