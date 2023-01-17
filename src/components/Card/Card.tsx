@@ -56,7 +56,7 @@ Card.propTypes =
 {
     title: PropTypes.string,
     titleColor: PropTypes.string,
-    titleFontSize: PropTypes.string,
+    titleFontSize: PropTypes.number,
     description: PropTypes.string,
     buttonText: PropTypes.string,
     buttonForeColor: PropTypes.string,
@@ -67,5 +67,3 @@ Card.propTypes =
     shadowColorFocus: PropTypes.string,
     link: PropTypes.string
 }
-
-
