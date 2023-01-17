@@ -13,6 +13,7 @@ import { ReactLogo } from './components/Logos/ReactLogo/ReactLogo';
 import { MongoDBLogo } from './components/Logos/MongoDBLogo/MongoDBLogo';
 import { NodeLogo0 } from './components/Logos/NodeLogo0/NodeLogo0';
 import { NodeLogo1 } from './components/Logos/NodeLogo1/NodeLogo1';
+import { BurgerButton } from './components/BurgerButton/BurgerButton';
 
 export { PayPalPayment };
 export {ButtonGoogleLogin};
@@ -29,3 +30,4 @@ export {ReactLogo};
 export {MongoDBLogo};
 export {NodeLogo0};
 export {NodeLogo1};
+export {BurgerButton};

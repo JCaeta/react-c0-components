@@ -1,0 +1,68 @@
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--background-color);
+    color: var(--foreground-color)
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--background-color);
+    color: var(--foreground-color);
+}
+
+.container-burger-button-rctc0comps{
+    background-color: var(--background-color);
+    border: solid 1px var(--background-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container-burger-button-rctc0comps{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-burger-button-rctc0comps div{
+    background-color: var(--foreground-color);
+    border-radius: 10px;
+    width: 80%;
+    height: 10%;
+    margin: 5% 0%;
+}
+
+.container-burger-button-rctc0comps div{
+    transition: 200ms;
+}
+
+/*-------------------------------------------------------------------------------- Hover*/
+.container-burger-button-rctc0comps:hover:not(.clicked) div:nth-child(1){
+    translate: -15%;
+}
+
+.container-burger-button-rctc0comps:hover:not(.clicked) div:nth-child(2){
+    transform: rotate(8deg);
+}
+
+.container-burger-button-rctc0comps:hover:not(.clicked) div:nth-child(3){
+    translate: 15%;
+}
+
+/*----------------------------------------------------------------------------- Clicked*/
+.container-burger-button-rctc0comps.clicked div:nth-child(1){
+    transform: rotate(45deg);
+    translate: 20%;
+}
+
+.container-burger-button-rctc0comps.clicked div:nth-child(2){
+    display: none
+}
+
+.container-burger-button-rctc0comps.clicked div:nth-child(3){
+    transform: rotate(-45deg);
+    translate: -20%;
+}
+.container-burger-button-rctc0comps.clicked{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,99 @@
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--text-color_drop-down-menu_rctc0comps);
+    color: var(--text-hover-color_drop-down-menu_rctc0comps);
+    color: var(--text-click-color_drop-down-menu_rctc0comps);
+    color: var(--background-color_drop-down-menu_rctc0comps);
+    color: var(--background-hover-color_drop-down-menu_rctc0comps);
+    color: var(--background-click-color_drop-down-menu_rctc0comps);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--text-color_drop-down-menu_rctc0comps);
+    color: var(--text-hover-color_drop-down-menu_rctc0comps);
+    color: var(--text-click-color_drop-down-menu_rctc0comps);
+    color: var(--background-color_drop-down-menu_rctc0comps);
+    color: var(--background-hover-color_drop-down-menu_rctc0comps);
+    color: var(--background-click-color_drop-down-menu_rctc0comps);
+}
+
+:root{
+    --transition-time_drop-down-menu_rctc0comps: 500ms
+}
+
+/* -------------------------------------------------------------------- Background normal*/
+.container-dropdown-menu-rctc0comps{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-dropdown-menu-rctc0comps ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-dropdown-menu-rctc0comps ul li{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color_drop-down-menu_rctc0comps);
+}
+
+/* -------------------------------------------------------------------- Background hover*/
+.container-dropdown-menu-rctc0comps ul li:hover{
+    background-color: var(--background-hover-color_drop-down-menu_rctc0comps);
+    transition: var(--transition-time_drop-down-menu_rctc0comps);
+}
+
+/* -------------------------------------------------------------------- Background clicked*/
+.container-dropdown-menu-rctc0comps ul li:active{
+    background-color: var(--background-click-color_drop-down-menu_rctc0comps);
+    transition: var(--transition-time_drop-down-menu_rctc0comps);
+}
+
+/* -------------------------------------------------------------------- Text normal*/
+.container-dropdown-menu-rctc0comps ul li a{
+    text-decoration: none;
+    color: var(--text-color_drop-down-menu_rctc0comps);
+    width: 100%;
+    text-align: center;
+}
+
+.container-dropdown-menu-rctc0comps ul li span{
+    color: var(--text-color_drop-down-menu_rctc0comps);
+}
+/* -------------------------------------------------------------------- Text hover*/
+.container-dropdown-menu-rctc0comps ul li a:hover{
+    color: var(--text-hover-color_drop-down-menu_rctc0comps);
+    transition: var(--transition-time_drop-down-menu_rctc0comps);
+}
+
+.container-dropdown-menu-rctc0comps ul li span:hover{
+    color: var(--text-hover-color_drop-down-menu_rctc0comps);
+    transition: var(--transition-time_drop-down-menu_rctc0comps);
+}
+
+.container-dropdown-menu-rctc0comps ul li:hover a{
+    color: var(--text-hover-color_drop-down-menu_rctc0comps);
+    transition: var(--transition-time_drop-down-menu_rctc0comps);
+}
+
+.container-dropdown-menu-rctc0comps ul li:hover span{
+    color: var(--text-hover-color_drop-down-menu_rctc0comps);
+    transition: var(--transition-time_drop-down-menu_rctc0comps);
+}
+
+/* -------------------------------------------------------------------- Text clicked*/
+.container-dropdown-menu-rctc0comps ul li a:active{
+    color: var(--text-click-color_drop-down-menu_rctc0comps);
+    transition: 0;
+}
+
+.container-dropdown-menu-rctc0comps ul li span:active{
+    color: var(--text-click-color_drop-down-menu_rctc0comps);
+    transition: 0;
+}
+

@@ -4,7 +4,7 @@
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
-    color: var(--shadow-color-focus);
+    color: var(--shadow-color-no-focus_card_rctc0comps);
     color: var(--button-border-color);
 }
 
