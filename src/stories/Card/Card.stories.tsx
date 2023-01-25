@@ -16,6 +16,8 @@ Primary.args =
     title: "Generic persistence layer with MongoDB and C#",
     titleColor: "black",
     titleFontSize: 15,
+    buttonFontSize: 13,
+    descriptionFontSize: 13,
     description: "This is the card's description",
     descriptionColor: "#6a6a6a",
     height: "100%",

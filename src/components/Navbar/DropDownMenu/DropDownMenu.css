@@ -21,6 +21,12 @@
 }
 
 /* -------------------------------------------------------------------- Background normal*/
+
+.container_navbar_rctc0comps{
+    height: 100%;
+    width: 100%;
+}
+
 .container-dropdown-menu-rctc0comps{
     display: flex;
     flex-direction: column;
@@ -97,3 +103,8 @@
     transition: 0;
 }
 
+/* ------------------------------------------------------------------- Menú*/
+.dropdown-menu-navbar-rctc0comps{
+    /* width: 100%; */
+    
+}

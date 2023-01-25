@@ -19,14 +19,17 @@ export const Card = (props: any) =>
                         {props.title}
                     </h3>
                     <p
-                        style={{color: props.descriptionColor}}>
+                        style={{
+                            color: props.descriptionColor,
+                            fontSize: props.descriptionFontSize + "px"}}>
                         {props.description}
                     </p>
                     <a 
                         href={props.link} 
                         style={{
                             color: props.buttonForeColor, 
-                            backgroundColor: props.buttonBackgroundColor}}>
+                            backgroundColor: props.buttonBackgroundColor,
+                            fontSize: props.buttonFontSize + "px"}}>
                         {props.buttonText}
                     </a>
                 </div>
@@ -40,6 +43,8 @@ Card.defaultProps =
     title: "Title",
     titleColor: "black",
     titleFontSize: 15,
+    buttonFontSize: 13,
+    descriptionFontSize: 13,
     description: "This is the card's description",
     descriptionColor: "#6a6a6a",
     buttonText: "Button text",
@@ -57,6 +62,8 @@ Card.propTypes =
     title: PropTypes.string,
     titleColor: PropTypes.string,
     titleFontSize: PropTypes.number,
+    buttonFontSize: PropTypes.number,
+    descriptionFontSize: PropTypes.number,
     description: PropTypes.string,
     buttonText: PropTypes.string,
     buttonForeColor: PropTypes.string,
