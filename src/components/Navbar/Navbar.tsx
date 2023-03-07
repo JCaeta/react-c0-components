@@ -26,7 +26,10 @@ export const Navbar = (props: any) =>
                     <HashLink  
                         smooth 
                         to={props.homeLink.link}
-                        style={{textDecoration: "none"}}>
+                        style={{
+                            textDecoration: "none",
+                            display: "flex",
+                            alignItems: "center"}}>
                         {props.homeElement}
                     </HashLink>
                 )
@@ -34,7 +37,10 @@ export const Navbar = (props: any) =>
                 return (
                     <a 
                         href={props.homeLink.link} 
-                        style={{textDecoration: "none"}}>
+                        style={{
+                            textDecoration: "none",
+                            display: "flex",
+                            alignItems: "center"}}>
                         {props.homeElement}
                     </a>
                 )
