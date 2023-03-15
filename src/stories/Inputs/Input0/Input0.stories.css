@@ -1,0 +1,10 @@
+#container-input-story{
+    /* background-color: aqua; */
+    height: 300px;
+}
+
+#span-input-story{
+    position: absolute;
+    top: 100px;
+    /* margin-top: 50px; */
+}

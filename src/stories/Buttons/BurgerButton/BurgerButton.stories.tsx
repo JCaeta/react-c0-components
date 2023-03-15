@@ -1,10 +1,10 @@
 import React from 'react';
-import { BurgerButton } from '../../index';
+import { BurgerButton } from '../../../index';
 import "./BurgerButton.css";
 
 export default
 {
-    title: 'BurgerButton',
+    title: 'Buttons/BurgerButton',
     component: BurgerButton,
 }
 

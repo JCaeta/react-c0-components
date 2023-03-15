@@ -1,0 +1,54 @@
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--hover-background-color_button1_rctc0comps);
+    color: var(--click-background-color_button1_rctc0comps);
+    color: var(--hover-text-color_button1_rctc0comps);
+    color: var(--click-text-color_button1_rctc0comps);
+    color: var(--color-background_button1_rctc0comps);
+    color: var(--color-text_button1_rctc0comps);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--hover-background-color_button1_rctc0comps);
+    color: var(--click-background-color_button1_rctc0comps);
+    color: var(--hover-text-color_button1_rctc0comps);
+    color: var(--click-text-color_button1_rctc0comps);
+    color: var(--color-background_button1_rctc0comps);
+    color: var(--color-text_button1_rctc0comps);
+}
+
+
+.c0-button1_rctc0comps {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-background_button1_rctc0comps);
+    color: var(--color-text_button1_rctc0comps);
+}
+
+#button-icon{
+    width: fit-content;
+    height: 80%;
+    left: calc(-50%);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+#button-text{
+    text-align: left;
+    margin-left: 30px;
+}
+
+.c0-button1_rctc0comps:hover{
+    background-color: var(--hover-background-color_button1_rctc0comps);
+    transition-duration: 350ms;
+    color: var(--hover-text-color_button1_rctc0comps);
+}
+
+.c0-button1_rctc0comps:active{
+    background-color: var(--click-background-color_button1_rctc0comps);
+    color: var(--click-text-color_button1_rctc0comps);
+}
+

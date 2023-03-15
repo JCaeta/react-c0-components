@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Button.css';
+import './Button0.css';
 
-export const Button = (props: any) => 
+export const Button0 = (props: any) => 
 {
     var border = "solid " + props.borderWidth + "px " + props.borderColor;
-    document.documentElement.style.setProperty('--hover-background-color', props.hoverBackgroundColor);
-    document.documentElement.style.setProperty('--hover-text-color', props.hoverTextColor);
-    document.documentElement.style.setProperty('--click-background-color', props.clickBackgroundColor);
-    document.documentElement.style.setProperty('--click-text-color', props.clickTextColor);
+    document.documentElement.style.setProperty('--hover-background-color_button0_rctc0comps', props.hoverBackgroundColor);
+    document.documentElement.style.setProperty('--hover-text-color_button0_rctc0comps', props.hoverTextColor);
+    document.documentElement.style.setProperty('--click-background-color_button0_rctc0comps', props.clickBackgroundColor);
+    document.documentElement.style.setProperty('--click-text-color_button0_rctc0comps', props.clickTextColor);
 
     return (<>
         <button 
-            className="c0-button"
+            className="c0-button0"
             onClick={props.onClick}
             style={{
                 border: border,
-                background: props.backgroundColor,
-                color: props.textColor,
                 height: props.height + "px",
                 borderRadius: props.borderRadius + "px",
                 fontSize: props.fontSize + 'px'}}>
@@ -26,7 +24,7 @@ export const Button = (props: any) =>
     </>);
 }
 
-Button.defaultProps =
+Button0.defaultProps =
 {
     text: "Click me",
     borderWidth: 1,
@@ -42,7 +40,7 @@ Button.defaultProps =
     fontSize: 15
 }
 
-Button.propTypes = 
+Button0.propTypes = 
 {
     text: PropTypes.string,
     borderColor: PropTypes.string,

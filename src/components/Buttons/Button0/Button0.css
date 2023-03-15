@@ -1,0 +1,30 @@
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--hover-background-color_button0_rctc0comps);
+    color: var(--click-background-color_button0_rctc0comps);
+    color: var(--hover-text-color_button0_rctc0comps);
+    color: var(--click-text-color_button0_rctc0comps);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--hover-background-color_button0_rctc0comps);
+    color: var(--click-background-color_button0_rctc0comps);
+    color: var(--hover-text-color_button0_rctc0comps);
+    color: var(--click-text-color_button0_rctc0comps);
+}
+
+.c0-button0 {
+    position: relative;
+    width: 100%;
+}
+
+.c0-button0:hover{
+    background-color:var(--hover-background-color_button0_rctc0comps);
+    transition-duration: 350ms ;
+    color: var(--hover-text-color_button0_rctc0comps);
+}
+
+.c0-button0:active{
+    background-color: var(--click-background-color_button0_rctc0comps);
+    color: var(--click-text-color_button0_rctc0comps);
+}
+

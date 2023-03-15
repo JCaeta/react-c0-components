@@ -21,12 +21,27 @@ export const Menu = (props: any) =>
                     smooth to={link} 
                     style={{textDecoration: "none"}}>
                     <li>
-                        <span style={{fontSize: props.fontSize + "px"}}>{name}</span>
+                        <span 
+                            style={{
+                                fontSize: props.fontSize + "px",
+                                fontFamily: props.fontFamily
+                            }}>
+                            {name}
+                        </span>
                     </li>
                 </HashLink>
             );
         } else{
-            return <li><a href={link} style={{fontSize: props.fontSize + "px"}}>{name}</a></li>
+            return <li>
+                <a 
+                    href={link} 
+                    style={{
+                        fontSize: props.fontSize + "px",
+                        fontFamily: props.fontFamily
+                    }}>
+                    {name}
+                </a>
+            </li>
         }
     }
 
@@ -45,6 +60,7 @@ Menu.defaultProps =
         {name: "Facebook", link: "https://facebook.com", isHashLink: false}
     ],
     fontSize: 50,
+    fontFamily: '',
     backgroundColor: "rgb(49,49,49)",
     textColor: "white",
     hoverTextColor: "black",
@@ -57,6 +73,7 @@ Menu.propTypes =
 {
     links: PropTypes.array,
     fontSize: PropTypes.number,
+    fontFamily: PropTypes.string,
     backgroundColor: PropTypes.string,
     textColor: PropTypes.string,
     hoverTextColor: PropTypes.string,

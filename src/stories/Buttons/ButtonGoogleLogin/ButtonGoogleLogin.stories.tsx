@@ -1,10 +1,15 @@
 import React from 'react';
-import { ButtonGoogleLogin } from '../../index';
+import { ButtonGoogleLogin } from '../../../index';
 
 export default
 {
-    title: 'ButtonGoogleLogin',
+    title: 'Buttons/ButtonGoogleLogin',
     component: ButtonGoogleLogin,
+    parameters: {
+        previewTabs: {
+            'storybook/docs/panel': { hidden: true }
+        },
+    }
 }
 
 const onSuccess = (response: any) => {
@@ -17,7 +22,16 @@ const onFailure = (response: any) => {
     console.log(response);
 }
 
-const TemplateButtonGoogleLogin = (args: any) => <ButtonGoogleLogin {...args} />;
+const TemplateButtonGoogleLogin = (args: any) =>{
+    return(<>
+        <h1>ButtonGoogleLogin</h1>
+        <p>To use this component you need to allow all cookies in your browser and provide a google client id</p>
+        <ButtonGoogleLogin {...args} />
+
+        <p>You can see the output in the console log</p>
+
+    </>)
+}
 
 export const Primary = TemplateButtonGoogleLogin.bind({});
 Primary.args = 

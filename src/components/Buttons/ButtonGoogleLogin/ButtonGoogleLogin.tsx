@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import GoogleLogin from 'react-google-login';
 import { gapi } from 'gapi-script';
@@ -13,36 +13,69 @@ export const ButtonGoogleLogin = (props: any) =>
     document.documentElement.style.setProperty('--click-text-color', props.clickTextColor);
     document.documentElement.style.setProperty('--click-background-color', props.clickBackgroundColor);
 
+    const[clientId, setClientId] = useState("");
+
     useEffect(() => {
+        setClientId(props.clientId)
         function start() {
             gapi.client.init({
-                clientId: props.clientId,
+                clientId: clientId,
                 scope: 'email',
             });
         }
         gapi.load('client:auth2', start);
-        }, []);
+    }, []);
 
-    return (<>
-        <GoogleLogin
-            clientId={props.clientId}
-            onSuccess={props.onSuccess}
-            onFailure={props.onFailure}
-            render={renderProps => (
-                <button
-                    className='button-google-signup'
-                    onClick={renderProps.onClick}
-                    style={{
-                        background: props.backgroundColor,
-                        color: props.textColor,
-                        border: border,
-                        fontSize: props.fontSize
-                    }}>
+    const createButton = () => {
+        if(props.clientId.length > 0){
+            return createClientIdButton();
+        } else {
+            return createNonClientIdButton();
+        }
+    }
+
+    const createNonClientIdButton = () =>{
+        return(
+            <button
+                className='button-google-signup'
+                style={{
+                    background: props.backgroundColor,
+                    color: props.textColor,
+                    border: border,
+                    fontSize: props.fontSize
+                }}>
                 <LogoGoogle/>
                 {props.text}
-                </button>
-            )}
-        />
+            </button>
+        )
+    }
+
+    const createClientIdButton = () => {
+        return(<>
+            <GoogleLogin
+                clientId={props.clientId}
+                onSuccess={props.onSuccess}
+                onFailure={props.onFailure}
+                render={renderProps => (
+                    <button
+                        className='button-google-signup'
+                        onClick={renderProps.onClick}
+                        style={{
+                            background: props.backgroundColor,
+                            color: props.textColor,
+                            border: border,
+                            fontSize: props.fontSize
+                        }}>
+                    <LogoGoogle/>
+                    {props.text}
+                    </button>
+                )}
+            />
+        </>);
+    }
+    
+    return (<>
+        {createButton()}
     </>);
 }
 

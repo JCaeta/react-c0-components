@@ -41,6 +41,7 @@ NavbarTest.args =
     clickBackgroundColor: "yellow",
     linksBackgroundColorFocused: "grey",
     fontSize: 50,
+    fontFamily: "'Rubik', sans-serif",
 
     links: [
         {name: "Google", link: "https://google.com", isHashLink: false},
@@ -62,6 +63,7 @@ DropDownMenuTest.args =
         {name: "Facebook", link: "https://facebook.com", isHashLink: false}
     ],
     fontSize: 50,
+    fontFamily: '',
     backgroundColor: "rgb(49,49,49)",
     textColor: "white",
     hoverTextColor: "black",

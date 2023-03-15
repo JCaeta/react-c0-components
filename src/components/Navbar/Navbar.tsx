@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import "./Navbar.css"
-import { BurgerButton } from '../BurgerButton/BurgerButton';
+import { BurgerButton } from '../Buttons/BurgerButton/BurgerButton';
 import { HashLink } from 'react-router-hash-link';
 import { DropDownMenu } from './DropDownMenu/DropDownMenu';
 import { Menu } from '../Menu/Menu';
@@ -63,6 +63,7 @@ export const Navbar = (props: any) =>
                 <div className={clicked?"dropdown-menu-navbar-rctc0comps":"dropdown-menu-navbar-rctc0comps hidden"}>
                     <DropDownMenu 
                         fontSize={props.fontSize}
+                        fontFamily={props.fontFamily}
                         links={props.links} 
                         backgroundColor={props.backgroundColor}
                         textColor={props.textColor}
@@ -83,6 +84,7 @@ export const Navbar = (props: any) =>
                     <Menu 
                         links={props.links} 
                         fontSize={props.fontSize}
+                        fontFamily={props.fontFamily}
                         backgroundColor={props.backgroundColor}
                         textColor={props.textColor}
                         hoverBackgroundColor={props.hoverBackgroundColor}
@@ -105,6 +107,7 @@ Navbar.defaultProps =
     homeElement: <h3 style={{color: "white"}}>Title</h3>,
     homeLink: {link: "", isHashLink: false},
     textColor: "white",
+    fontFamily: '',
     backgroundColor: "rgb(32,32,32)",
     burgerButtonColor: "white",
     burgerButtonWidth: 150,
@@ -128,6 +131,7 @@ Navbar.propTypes =
     height: PropTypes.number,
     homeElement: PropTypes.element,
     homeLink: PropTypes.object,
+    fontFamily: PropTypes.string,
     linksBackgroundColorFocused: PropTypes.string,
     backgroundColor: PropTypes.string,
     burgerButtonColor: PropTypes.string,

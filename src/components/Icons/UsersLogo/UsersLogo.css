@@ -1,0 +1,36 @@
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--color_users-logo_rctc0comps);
+    color: var(--color-hover_users-logo_rctc0comps);
+    color: var(--color-click_users-logo_rctc0comps);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--color_users-logo_rctc0comps);
+    color: var(--color-hover_users-logo_rctc0comps);
+    color: var(--color-click_users-logo_rctc0comps);
+}
+
+#users-logo_rctc0comps{
+    fill: var(--color_users-logo_rctc0comps);
+    transition: 500ms;
+}
+
+#users-logo_rctc0comps:hover{
+    fill: var(--color-hover_users-logo_rctc0comps);
+    transition: 500ms;
+}
+
+#users-logo_rctc0comps:active{
+    fill: var(--color-click_users-logo_rctc0comps);
+    transition: 500ms;
+}
+
+.c0-button1_rctc0comps:hover #users-logo_rctc0comps{
+    fill: var(--color-hover_users-logo_rctc0comps);
+    transition: 500ms;
+}
+
+.c0-button1_rctc0comps:active #users-logo_rctc0comps{
+    fill:var(--color-click_users-logo_rctc0comps);
+    transition: 500ms;
+}

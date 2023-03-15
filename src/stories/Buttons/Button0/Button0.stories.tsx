@@ -1,13 +1,23 @@
 import React from 'react';
-import {Button} from '../../index'
+import {Button0} from '../../../index';
 
 export default
 {
-    title: 'Button',
-    component: Button,
+    title: 'Buttons/Button0',
+    component: Button0,
 }
 
-const Template = (args: any) => <Button {...args} />;
+const Template = (args: any) => {
+
+    return(<>
+        <Button0 {...args} />
+    </>);
+};
+
+
+function onClick(){
+    console.log("onClick()");
+}
 
 export const Primary = Template.bind({});
 Primary.args = 
@@ -23,5 +33,6 @@ Primary.args =
     backgroundColor: 'white',
     textColor: 'black',
     height: 30,
-    fontSize: 15
+    fontSize: 15,
+    onClick: onClick
 }
