@@ -5,8 +5,8 @@ import { useState } from 'react';
 
 export const BurgerButton = (props: any) => 
 {
-    document.documentElement.style.setProperty('--background-color', props.backgroundColor);
-    document.documentElement.style.setProperty('--foreground-color', props.foregroundColor);
+    document.documentElement.style.setProperty('--background-color_burguer-button_rctc0comps', props.backgroundColor);
+    document.documentElement.style.setProperty('--foreground-color_burguer-button_rctc0comps', props.foregroundColor);
 
     const [parentClass, setParentClass] = useState("container-burger-button-rctc0comps")
     function onClick(){

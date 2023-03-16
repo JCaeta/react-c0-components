@@ -1,17 +1,17 @@
 import React from 'react';
-import { HomeLogo } from '../../index';
+import { HomeIcon } from '../../index';
 
 export default
 {
-    title: 'Icons/HomeLogo',
-    HomeLogo: HomeLogo,
+    title: 'Icons/HomeIcon',
+    HomeIcon: HomeIcon,
     argTypes: {
         color: {control: {type: 'color'}},
         colorFocused: {control: {type: 'color'}}
     }
 }
 
-const Template = (args: any) => <HomeLogo {...args} />;
+const Template = (args: any) => <HomeIcon {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = 

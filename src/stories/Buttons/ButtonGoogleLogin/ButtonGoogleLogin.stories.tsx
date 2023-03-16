@@ -1,5 +1,6 @@
 import React from 'react';
 import { ButtonGoogleLogin } from '../../../index';
+import '../../StoryStyles.css';
 
 export default
 {
@@ -24,7 +25,7 @@ const onFailure = (response: any) => {
 
 const TemplateButtonGoogleLogin = (args: any) =>{
     return(<>
-        <h1>ButtonGoogleLogin</h1>
+        <h1 className="h1_stories_rctc0comps">ButtonGoogleLogin</h1>
         <p>To use this component you need to allow all cookies in your browser and provide a google client id</p>
         <ButtonGoogleLogin {...args} />
 

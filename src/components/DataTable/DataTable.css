@@ -1,0 +1,47 @@
+
+.datatable_rctc0comps {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead th {
+    background-color: rgb(234,240,246);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2;
+    transition: 200ms;
+} 
+
+
+tbody tr:hover .button-actions_datatable_rctc0comps{
+    background-color: #f2f2f2;
+    transition: 200ms;
+} 
+
+td {
+    padding: 10px;
+}
+  
+td, th {
+    border: none;
+    border-bottom: 1px solid #008cba;
+}
+  
+.button-actions_datatable_rctc0comps {
+    background-color: white;  
+    border: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}

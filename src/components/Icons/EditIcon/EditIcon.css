@@ -1,0 +1,50 @@
+:root{
+    --transition-time_edit-icon_rctc0comps: 500ms;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--color_edit-icon_rctc0comps);
+    color: var(--color-border_edit-icon_rctc0comps);
+    color: var(--color-hover_edit-icon_rctc0comps);
+    color: var(--color-border-hover_edit-icon_rctc0comps);
+    color: var(--color-click_edit-icon_rctc0comps);
+    color: var(--color-border-click_edit-icon_rctc0comps);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--color_edit-icon_rctc0comps);
+    color: var(--color-border_edit-icon_rctc0comps);
+    color: var(--color-hover_edit-icon_rctc0comps);
+    color: var(--color-border-hover_edit-icon_rctc0comps);
+    color: var(--color-border-click_edit-icon_rctc0comps);
+}
+
+#svg_edit-icon_rctc0comps{
+    fill: var(--color_edit-icon_rctc0comps);
+    transition: var(--transition-time_edit-icon_rctc0comps);
+}
+
+#svg_edit-icon_rctc0comps:hover{
+    fill: var(--color-hover_edit-icon_rctc0comps);
+    transition: var(--transition-time_edit-icon_rctc0comps);
+}
+
+#svg_edit-icon_rctc0comps:active{
+    fill: var(--color-click_edit-icon_rctc0comps);
+    transition: 0ms;
+}
+
+#path1_edit-icon_rctc0comps{
+    stroke: var(--color-border_edit-icon_rctc0comps);
+    transition: var(--transition-time_edit-icon_rctc0comps);
+}
+
+#svg_edit-icon_rctc0comps:hover #path1_edit-icon_rctc0comps{
+    stroke: var(--color-border-hover_edit-icon_rctc0comps);
+    transition: var(--transition-time_edit-icon_rctc0comps);
+}
+
+#svg_edit-icon_rctc0comps:active #path1_edit-icon_rctc0comps{
+    stroke: var(--color-border-click_edit-icon_rctc0comps);
+    transition: 0ms;
+}

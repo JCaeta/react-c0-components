@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "./UsersLogo.css";
+import "./UsersIcon.css";
 
-export const UsersLogo = (props: any) => 
+export const UsersIcon = (props: any) => 
 {
-    document.documentElement.style.setProperty('--color_users-logo_rctc0comps', props.color);
-    document.documentElement.style.setProperty('--color-hover_users-logo_rctc0comps', props.colorHover);
-    document.documentElement.style.setProperty('--color-click_users-logo_rctc0comps', props.colorClick);
+    document.documentElement.style.setProperty('--color_users-icon_rctc0comps', props.color);
+    document.documentElement.style.setProperty('--color-hover_users-icon_rctc0comps', props.colorHover);
+    document.documentElement.style.setProperty('--color-click_users-icon_rctc0comps', props.colorClick);
 
     return (<>
-        <svg fill="#000000" height="100%" width="100%" version="1.1" id="users-logo_rctc0comps" xmlns="http://www.w3.org/2000/svg" 
+        <svg fill="#000000" height="100%" width="100%" version="1.1" id="users-icon_rctc0comps" xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 611.998 611.998">
             <g>
                 <g>
@@ -49,14 +49,14 @@ export const UsersLogo = (props: any) =>
     </>);
 }
 
-UsersLogo.defaultProps =
+UsersIcon.defaultProps =
 {
     color: "black",
     colorHover: "grey",
     colorClick: "green"
 }
 
-UsersLogo.propTypes = 
+UsersIcon.propTypes = 
 {
     color: PropTypes.string,
     colorHover: PropTypes.string,

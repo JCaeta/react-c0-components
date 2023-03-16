@@ -1,0 +1,31 @@
+:root{
+    --transition-time_remove-icon_rctc0comps: 500ms;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--color_remove-icon_rctc0comps);
+    color: var(--color-hover_remove-icon_rctc0comps);
+    color: var(--color-click_remove-icon_rctc0comps);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--color_remove-icon_rctc0comps);
+    color: var(--color-hover_remove-icon_rctc0comps);
+    color: var(--color-click_remove-icon_rctc0comps);
+}
+
+
+#svg_remove-icon_rctc0comps{
+    fill: var(--color_remove-icon_rctc0comps);
+    transition: var(--transition-time_remove-icon_rctc0comps);
+}
+
+#svg_remove-icon_rctc0comps:hover{
+    fill: var(--color-hover_remove-icon_rctc0comps);
+    transition: var(--transition-time_remove-icon_rctc0comps);
+}
+
+#svg_remove-icon_rctc0comps:active{
+    fill: var(--color-click_remove-icon_rctc0comps);
+    transition: 0ms;
+}

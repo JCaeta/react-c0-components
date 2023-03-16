@@ -2,6 +2,7 @@ import React from 'react';
 import {Login} from '../../components/Login/Login';
 import {customViewports} from '../storiesVariables';
 import { useState} from 'react';
+import '../StoryStyles.css';
 
 export default
 {
@@ -41,7 +42,7 @@ const Template = (args: any) => {
     }
 
     return(<>
-        <h1 
+        <h1 className="h1_stories_rctc0comps"
             style={{
                 fontSize: "60px"
             }}>

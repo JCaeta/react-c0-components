@@ -1,13 +1,13 @@
 import React from 'react';
-import { UsersLogo } from '../../index';
+import { UsersIcon } from '../../index';
 
 export default
 {
-    title: 'Icons/UsersLogo',
-    component: UsersLogo,
+    title: 'Icons/UsersIcon',
+    component: UsersIcon,
 }
 
-const Template = (args: any) => <UsersLogo {...args} />;
+const Template = (args: any) => <UsersIcon {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = 

@@ -1,16 +1,16 @@
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: var(--background-color);
-    color: var(--foreground-color)
+    color: var(--background-color_burguer-button_rctc0comps);
+    color: var(--foreground-color_burguer-button_rctc0comps)
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
-    color: var(--background-color);
-    color: var(--foreground-color);
+    color: var(--background-color_burguer-button_rctc0comps);
+    color: var(--foreground-color_burguer-button_rctc0comps);
 }
 
 .container-burger-button-rctc0comps{
-    background-color: var(--background-color);
-    border: solid 1px var(--background-color);
+    background-color: var(--background-color_burguer-button_rctc0comps);
+    border: solid 1px var(--background-color_burguer-button_rctc0comps);
     width: 100%;
     height: 100%;
     display: flex;
@@ -23,7 +23,7 @@
 }
 
 .container-burger-button-rctc0comps div{
-    background-color: var(--foreground-color);
+    background-color: var(--foreground-color_burguer-button_rctc0comps);
     border-radius: 10px;
     width: 80%;
     height: 10%;
@@ -33,7 +33,6 @@
 .container-burger-button-rctc0comps div{
     transition: 200ms;
 }
-
 
 /*-------------------------------------------------------------------------------- Hover*/
 .container-burger-button-rctc0comps:hover:not(.clicked) div:nth-child(1){
@@ -81,17 +80,3 @@
     justify-content: center;
     align-items: center;
 }
-
-/* @media(hover: none) {
-    .container-burger-button-rctc0comps div:nth-child(1){
-        translate: -15%;
-    }
-    
-    .container-burger-button-rctc0comps div:nth-child(2){
-        transform: rotate(0);
-    }
-    
-    .container-burger-button-rctc0comps div:nth-child(3){
-        translate: 0%;
-    }
-} */

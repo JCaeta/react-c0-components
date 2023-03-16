@@ -8,12 +8,12 @@
     color: var(--color);
 }
 
-#home-logo-rctc0comps:hover{
+#home-icon-rctc0comps:hover{
     fill: var(--color-focused);
     transition: 500ms;
 }
 
-#home-logo-rctc0comps{
+#home-icon-rctc0comps{
     fill: var(--color);
     transition: 500ms;
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "./HomeLogo.css";
+import "./HomeIcon.css";
 
-export const HomeLogo = (props: any) => 
+export const HomeIcon = (props: any) => 
 {
     document.documentElement.style.setProperty('--color-focused', props.colorFocused);
     document.documentElement.style.setProperty('--color', props.color);
@@ -14,13 +14,13 @@ export const HomeLogo = (props: any) =>
     </>);
 }
 
-HomeLogo.defaultProps =
+HomeIcon.defaultProps =
 {
     color: "black",
     colorFocused: "grey"
 }
 
-HomeLogo.propTypes = 
+HomeIcon.propTypes = 
 {
     color: PropTypes.string,
     colorFocused: PropTypes.string
